@@ -27,24 +27,25 @@
    'boolean_or
    'boolean_not
    'boolean_=
-   'string_=
-   'string_take
-   'string_drop
-   'string_reverse
-   'string_concat
-   'string_length
-   'string_includes?
+  ;  'string_=
+  ;  'string_take
+  ;  'string_drop
+  ;  'string_reverse
+  ;  'string_concat
+  ;  'string_length
+  ;  'string_includes?
    'close
    0
    1
    true
    false
-   ""
-   "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-   "A"
-   "C"
-   "G"
-   "T"))
+  ;  ""
+  ;  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  ;  "A"
+  ;  "C"
+  ;  "G"
+  ;  "T"))
+  ))
 
 (def opens ; number of blocks opened by instructions (default = 0)
   {'exec_dup 1
@@ -148,7 +149,7 @@
 (defn in4
   "Pushes the input labeled :in1 on the inputs map onto the :exec stack."
   [state]
-  (push-to-stack state :exec (:in3 (:input state))))
+  (push-to-stack state :exec (:in4 (:input state))))
 
 (defn integer_+
   [state]
@@ -172,21 +173,7 @@
                          [:integer :integer]
                          :integer))
 
-(defn integer_/
-  [state]
-  (make-push-instruction state
-                         (fn [int1 int2]
-                           (if (zero? int2)
-                             int1
-                             (/ int1 int2)))
-                         [:integer :integer]
-                         :integer))
 
-                
-
-; (defn integer_/
-;   [state]
-;   (make-push-instruction state /' [:integer :integer] :integer))
 
 (defn integer_=
   [state]
@@ -276,7 +263,7 @@
       (fn? first-instruction)
       (first-instruction popped-state)
       ;
-      (integer? first-instruction)
+      (number? first-instruction)
       (push-to-stack popped-state :integer first-instruction)
       ;
       (string? first-instruction)
@@ -525,8 +512,8 @@
   "Finds the largest possible combination of a given number of integers."
   [argmap individual]
   (let [program (push-from-plushy (:plushy individual))
-        inputs [[10 -5 5 0.5] [1 2 3 4] [-1 -2 -3 -4]]
-        correct-outputs [200 25 24]
+        inputs [[10 -5 5 0.5] [1 2 3 4] [-1 -2 -3 -4] [4 3 2 1] [-0.5 0.5 1 1.5] [-1 2 -3 4]]
+        correct-outputs [200 25 24 25 4.5 24]
         outputs (map (fn [input]
                        (peek-stack
                         (interpret-program
@@ -556,7 +543,7 @@
     (propel-gp (update-in (merge {:instructions default-instructions
                                   :error-function largest-combination-error-function
                                   :max-generations 500
-                                  :population-size 200
+                                  :population-size 400
                                   :max-initial-plushy-size 50
                                   :step-limit 100
                                   :parent-selection :tournament
