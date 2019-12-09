@@ -13,6 +13,9 @@
 (def default-instructions
   (list
    'in1
+   'in2
+   'in3
+   'in4
    'integer_+
    'integer_-
    'integer_*
@@ -132,6 +135,21 @@
   [state]
   (push-to-stack state :exec (:in1 (:input state))))
 
+(defn in2
+  "Pushes the input labeled :in1 on the inputs map onto the :exec stack."
+  [state]
+  (push-to-stack state :exec (:in2 (:input state))))
+
+(defn in3
+  "Pushes the input labeled :in1 on the inputs map onto the :exec stack."
+  [state]
+  (push-to-stack state :exec (:in3 (:input state))))
+
+(defn in4
+  "Pushes the input labeled :in1 on the inputs map onto the :exec stack."
+  [state]
+  (push-to-stack state :exec (:in3 (:input state))))
+
 (defn integer_+
   [state]
   (make-push-instruction state +' [:integer :integer] :integer))
@@ -150,9 +168,25 @@
                          (fn [int1 int2]
                            (if (zero? int2)
                              int1
-                             (quot int1 int2)))
+                             (/ int1 int2)))
                          [:integer :integer]
                          :integer))
+
+(defn integer_/
+  [state]
+  (make-push-instruction state
+                         (fn [int1 int2]
+                           (if (zero? int2)
+                             int1
+                             (/ int1 int2)))
+                         [:integer :integer]
+                         :integer))
+
+                
+
+; (defn integer_/
+;   [state]
+;   (make-push-instruction state /' [:integer :integer] :integer))
 
 (defn integer_=
   [state]
@@ -484,12 +518,43 @@
            :errors errors
            :total-error (apply +' errors))))
 
+;;;;;;;;;
+;; Largest Combination
+
+(defn largest-combination-error-function
+  "Finds the largest possible combination of a given number of integers."
+  [argmap individual]
+  (let [program (push-from-plushy (:plushy individual))
+        inputs [[10 -5 5 0.5] [1 2 3 4] [-1 -2 -3 -4]]
+        correct-outputs [200 25 24]
+        outputs (map (fn [input]
+                       (peek-stack
+                        (interpret-program
+                         program
+                         (assoc empty-push-state :input {:in1 (first input)
+                                                         :in2 (second input)
+                                                         :in3 (nth input 2)
+                                                         :in4 (nth input 3)})
+                         (:step-limit argmap))
+                        :integer))
+                     inputs)
+        errors (map (fn [correct-output output]
+                      (if (= output :no-stack-item)
+                        1000000
+                        (abs (- correct-output output))))
+                    correct-outputs
+                    outputs)]
+    (assoc individual
+           :behaviors outputs
+           :errors errors
+           :total-error (apply +' errors))))
+
 (defn -main
   "Runs propel-gp, giving it a map of arguments."
   [& args]
   (binding [*ns* (the-ns 'propel.core)]
     (propel-gp (update-in (merge {:instructions default-instructions
-                                  :error-function regression-error-function
+                                  :error-function largest-combination-error-function
                                   :max-generations 500
                                   :population-size 200
                                   :max-initial-plushy-size 50
@@ -500,4 +565,3 @@
                                         (map read-string args)))
                           [:error-function]
                           #(if (fn? %) % (eval %))))))
-
