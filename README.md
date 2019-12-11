@@ -1,8 +1,17 @@
-# propel
+# Genetic Programming: Largest Combination of Integers
+
+Given a vector of numbers, the program should find the largest possible combination of them using math operators.
+
+[Project Details](src/Markdown.md)
+
+
+
+
+
+## propel
 
 Lee Spector's Plushy fork of Tom Helmuth's little PushGP implementation in Clojure.
 
-[Write-up for project](src/Markdown.md)
 
 ## Usage
 
