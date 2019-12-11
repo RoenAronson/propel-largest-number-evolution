@@ -2,6 +2,8 @@
 
 Lee Spector's Plushy fork of Tom Helmuth's little PushGP implementation in Clojure.
 
+[Write-up for project](Markdown.md)
+
 ## Usage
 
 To run PushGP on the default genetic programming problem from a REPL, load propel.core into your REPL (i.e. `lein repl`), and run `(-main)`.
