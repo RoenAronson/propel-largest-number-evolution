@@ -2,7 +2,7 @@
 
 Lee Spector's Plushy fork of Tom Helmuth's little PushGP implementation in Clojure.
 
-[Write-up for project](Markdown.md)
+[Write-up for project](src/Markdown.md)
 
 ## Usage
 
