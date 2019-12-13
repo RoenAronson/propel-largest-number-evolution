@@ -1,0 +1,161 @@
+Lexicase: 
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in2 in1 integer_* boolean_not in4 integer_* boolean_and in3 integer_* integer_* integer_* 1 boolean_and integer_+)
+Best program: (in2 in1 integer_* boolean_not in4 integer_* boolean_and in3 integer_* integer_* integer_* 1 boolean_and integer_+)
+Best total error: 1015.875
+Best errors: (324.0 0 0 324.0 1 1 0 0 1 1 2.9375 2.9375 1 1 6 6 52.0 52.0 48 48 35.0 35.0 37.0 37.0)
+Best behaviors: (-124.0 25 25 -124.0 385 385 106 106 25 25 1.0625 1.0625 301 301 1 1 -1.0 -1.0 -23 -23 13.0 13.0 -11.0 -11.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (exec_if in3 close in1 1 1 integer_* integer_* integer_* integer_+ boolean_not in4 in2 integer_* integer_* integer_+ integer_+ boolean_= 1 integer_+)
+Best program: (exec_if (in3) (in1 1 1 integer_* integer_* integer_* integer_+ boolean_not in4 in2 integer_* integer_* integer_+ integer_+ boolean_= 1 integer_+))
+Best total error: 1015.875
+Best errors: (324.0 0 0 324.0 1 1 0 0 1 1 2.9375 2.9375 1 1 6 6 52.0 52.0 48 48 35.0 35.0 37.0 37.0)
+Best behaviors: (-124.0 25 25 -124.0 385 385 106 106 25 25 1.0625 1.0625 301 301 1 1 -1.0 -1.0 -23 -23 13.0 13.0 -11.0 -11.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in1 in3 in2 boolean_or boolean_not integer_* in4 integer_* integer_* 1 false integer_+ in4 close integer_+)
+Best program: (in1 in3 in2 boolean_or boolean_not integer_* in4 integer_* integer_* 1 false integer_+ in4 integer_+)
+Best total error: 1014.175
+Best errors: (323.5 4 1 314.0 9 5 3 1 0 0 2.4375 2.4375 4 4 3 6 51.8 50.0 44 49 31.0 35.5 33.0 37.5)
+Best behaviors: (-123.5 29 26 -114.0 393 389 109 107 24 24 1.5625 1.5625 304 304 4 1 -0.8 1.0 -19 -24 17.0 12.5 -7.0 -11.5)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in3 exec_if in2 integer_* integer_= integer_* in1 boolean_and integer_* integer_* 1 in4 in4 boolean_or 1 integer_= integer_% integer_% 1 false boolean_not true integer_+)
+Best program: (in3 exec_if (in2 integer_* integer_= integer_* in1 boolean_and integer_* integer_* 1 in4 in4 boolean_or 1 integer_= integer_% integer_% 1 false boolean_not true integer_+) ())
+Best total error: 1009.875
+Best errors: (324.0 0N 0 324.0 1N 1N 0N 0 1 1 2.9375 2.9375 1N 1N 6N 0 52.0 52.0 48N 48 35.0 35.0 37.0 37.0)
+Best behaviors: (-124.0 25N 25 -124.0 385N 385N 106N 106 25 25 1.0625 1.0625 301N 301N 1N 7 -1.0 -1.0 -23N -23 13.0 13.0 -11.0 -11.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (integer_% boolean_= in4 boolean_and in3 integer_* integer_* in2 boolean_or exec_if in1 false exec_if in2 in4 integer_+ in3 in3 in3 integer_- 0 boolean_not integer_% boolean_and 0 integer_dup true integer_- close integer_* integer_* boolean_not exec_if 1 exec_if in4 integer_- boolean_not in4 boolean_or close exec_if integer_= integer_% boolean_and integer_dup exec_if integer_+ integer_dup boolean_or integer_dup exec_if 0 boolean_or boolean_not integer_% boolean_not 0 integer_+ 1 0 integer_- in3 integer_- integer_* 0 in4 boolean_not in3 integer_* in1 integer_+ false true integer_+ exec_if boolean_and integer_+ integer_dup in1 in2 in3 in2 integer_dup 1 in1 false boolean_or close)
+Best program: (integer_% boolean_= in4 boolean_and in3 integer_* integer_* in2 boolean_or exec_if (in1 false exec_if (in2 in4 integer_+ in3 in3 in3 integer_- 0 boolean_not integer_% boolean_and 0 integer_dup true integer_-) (integer_* integer_* boolean_not exec_if (1 exec_if (in4 integer_- boolean_not in4 boolean_or) (exec_if (integer_= integer_% boolean_and integer_dup exec_if (integer_+ integer_dup boolean_or integer_dup exec_if (0 boolean_or boolean_not integer_% boolean_not 0 integer_+ 1 0 integer_- in3 integer_- integer_* 0 in4 boolean_not in3 integer_* in1 integer_+ false true integer_+ exec_if (boolean_and integer_+ integer_dup in1 in2 in3 in2 integer_dup 1 in1 false boolean_or) ()) ()) ()) ())) ())) ())
+Best total error: 892.0
+Best errors: (190 1 1 325.0 0 0 1 1 0 0 3.5 3.5 0 0 7 7 53.0 53.0 49 49 36.0 36.0 38.0 38.0)
+Best behaviors: (10 24 24 -125.0 384 384 105 105 24 24 0.5 0.5 300 300 0 0 -2.0 -2.0 -24 -24 12.0 12.0 -12.0 -12.0)
+
+
+Tournament:
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (integer_* integer_+ integer_* integer_* boolean_not 1 in4 1 in3 integer_- integer_= in2 in1 integer_+ boolean_or true exec_if integer_+ integer_dup in1 in3 integer_* boolean_not in2 exec_if in4 integer_* integer_* close false integer_= false false integer_+ integer_* integer_- exec_if in1)
+Best program: (integer_* integer_+ integer_* integer_* boolean_not 1 in4 1 in3 integer_- integer_= in2 in1 integer_+ boolean_or true exec_if (integer_+ integer_dup in1 in3 integer_* boolean_not in2 exec_if (in4 integer_* integer_*) (false integer_= false false integer_+ integer_* integer_- exec_if (in1) ())) ())
+Best total error: 971.0
+Best errors: (325.0 1 1 325.0 0 0 1 1 0 0 0.0 0.0 0 0 7 7 53.0 53.0 49 9 36.0 36.0 29.0 38.0)
+Best behaviors: (-125.0 24 24 -125.0 384 384 105 105 24 24 4.0 4.0 300 300 0 0 -2.0 -2.0 -24 16 12.0 12.0 -3.0 -12.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (1 1 exec_if in3 in1 boolean_not in2 integer_* in4 true integer_* integer_* integer_+ boolean_or boolean_not boolean_= exec_if boolean_= boolean_= exec_if boolean_or exec_if exec_if)
+Best program: (1 1 exec_if (in3 in1 boolean_not in2 integer_* in4 true integer_* integer_* integer_+ boolean_or boolean_not boolean_= exec_if (boolean_= boolean_= exec_if (boolean_or exec_if (exec_if () ()) ()) ()) ()) ())
+Best total error: 1015.875
+Best errors: (324.0 0 0 324.0 1 1 0 0 1 1 2.9375 2.9375 1 1 6 6 52.0 52.0 48 48 35.0 35.0 37.0 37.0)
+Best behaviors: (-124.0 25 25 -124.0 385 385 106 106 25 25 1.0625 1.0625 301 301 1 1 -1.0 -1.0 -23 -23 13.0 13.0 -11.0 -11.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (1 in1 exec_if 1 in2 in2 boolean_not integer_dup integer_dup integer_* integer_+ integer_+ true integer_* integer_* true true)
+Best program: (1 in1 exec_if (1 in2 in2 boolean_not integer_dup integer_dup integer_* integer_+ integer_+ true integer_* integer_* true true) ())
+Best total error: 1426.69
+Best errors: (50 17 35 182.5 336 0 43 1 24 36 3.375 3.375 180 160 7 2 19 51.44 33 47 48.0 24 26.0 98)
+Best behaviors: (150 8 60 17.5 48 384 63 105 0 -12 0.625 0.625 120 140 0 9 70 -0.44000000000000006 -8 72 -0.0 72 -0.0 -72)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in3 in4 in1 in2 integer_* exec_dup exec_dup integer_* integer_* 1 integer_+ integer_*)
+Best program: (in3 in4 in1 in2 integer_* exec_dup (exec_dup (integer_* integer_* 1 integer_+ integer_*)))
+Best total error: 1004.125
+Best errors: (321.0 3 3 321.0 4 4 3 3 4 4 0.0625 0.0625 4 4 3 3 49.0 49.0 45 45 32.0 32.0 34.0 34.0)
+Best behaviors: (-121.0 28 28 -121.0 388 388 109 109 28 28 4.0625 4.0625 304 304 4 4 2.0 2.0 -20 -20 16.0 16.0 -8.0 -8.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (1 boolean_not 1 in4 integer_- integer_dup integer_dup integer_+ integer_+ integer_dup integer_dup integer_dup in4 in3 in1 boolean_not integer_+ exec_if exec_if integer_dup integer_* integer_* boolean_= exec_dup boolean_= exec_dup 1 1 1 1 1 integer_dup integer_+ integer_+ integer_+ integer_+ integer_+ integer_+ integer_+)
+Best program: (1 boolean_not 1 in4 integer_- integer_dup integer_dup integer_+ integer_+ integer_dup integer_dup integer_dup in4 in3 in1 boolean_not integer_+ exec_if (exec_if (integer_dup integer_* integer_* boolean_= exec_dup (boolean_= exec_dup (1 1 1 1 1 integer_dup integer_+ integer_+ integer_+ integer_+ integer_+ integer_+ integer_+))) ()) ())
+Best total error: 577.2
+Best errors: (57.5 27 35 81.5 68 4 2 18 25 12 26.5 26.5 0 57 5 29 17.200000000000003 7 21 2 35.0 6.5 11.0 3.5)
+Best behaviors: (142.5 52 60 118.5 452 388 108 124 -1 12 30.5 30.5 300 243 12 36 33.8 44 4 23 13.0 41.5 37.0 29.5)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in4 false in1 in1 integer_+ close in3 integer_+ in3 1 exec_dup close exec_if boolean_or integer_* in4 1 integer_+ close integer_* exec_dup integer_* boolean_= in3 in1 integer_- in1 integer_* integer_-)
+Best program: (in4 false in1 in1 integer_+ in3 integer_+ in3 1 exec_dup () exec_if (boolean_or integer_* in4 1 integer_+) (integer_* exec_dup (integer_* boolean_= in3 in1 integer_- in1 integer_* integer_-)))
+Best total error: 724.4
+Best errors: (62.5 25 11 30.25 24 0 17 39 64 44 3.625 3.625 75 121 5 4 44.4 3 7 41 15.25 36.5 15.75 32.5)
+Best behaviors: (137.5 50 36 230.25 408 384 89 67 -40 -20 0.375 0.375 225 179 12 3 6.6 48 32 -16 32.75 11.5 41.75 -6.5)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in2 in4 in1 integer_+ 1 integer_+ integer_dup integer_* in3 boolean_not in2 integer_* in2 integer_+ integer_+ integer_dup integer_+ integer_+ in3 integer_+ integer_+ boolean_= integer_+)
+Best program: (in2 in4 in1 integer_+ 1 integer_+ integer_dup integer_* in3 boolean_not in2 integer_* in2 integer_+ integer_+ integer_dup integer_+ integer_+ in3 integer_+ integer_+ boolean_= integer_+)
+Best total error: 795.92
+Best errors: (4.5 68 70 24.5 76 2 40 36 0 9 6.5 6.5 81 102 34 34 26.519999999999996 35.4 28 23 22.5 29.5 17.5 19.5)
+Best behaviors: (204.5 93 95 224.5 308 382 146 142 24 33 10.5 10.5 219 198 41 41 24.480000000000004 15.6 53 48 25.5 18.5 43.5 6.5)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in2 in1 in4 exec_if boolean_= integer_* integer_+ in1 integer_* exec_if in4 in4 exec_dup in3 integer_* boolean_not in1 exec_dup in1 exec_if exec_dup integer_+)
+Best program: (in2 in1 in4 exec_if (boolean_= integer_* integer_+ in1 integer_* exec_if (in4 in4 exec_dup (in3 integer_* boolean_not in1 exec_dup (in1 exec_if (exec_dup (integer_+)) ()))) ()) ())
+Best total error: 514.4
+Best errors: (5.0 41 45 1.0 34 16 12 46 12 18 1.0 1.0 25 70 11 23 40.2 7.200000000000003 13 1 4.0 50.5 3.0 34.5)
+Best behaviors: (195.0 66 70 199.0 418 400 118 152 12 6 3.0 3.0 275 230 18 30 10.8 43.8 38 24 44.0 -2.5 29.0 -8.5)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in1 in3 integer_+ integer_dup integer_* 1 integer_- 1 integer_- 1 integer_- in4 exec_dup integer_* in4 true exec_dup exec_dup integer_- exec_dup 1 integer_+)
+Best program: (in1 in3 integer_+ integer_dup integer_* 1 integer_- 1 integer_- 1 integer_- in4 exec_dup (integer_* in4 true exec_dup (exec_dup (integer_- exec_dup (1 integer_+)))))
+Best total error: 658.3
+Best errors: (76.0 33 20 33.5 102 10 1 3 54 41 8.0 8.0 1 58 4 7 37.8 15 15 31 29.0 32.0 17.0 22.0)
+Best behaviors: (124.0 58 45 166.5 486 394 107 109 -30 -17 12.0 12.0 299 242 11 14 13.2 36 10 -6 19.0 16.0 43.0 4.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (exec_if exec_if boolean_and boolean_and in2 in3 boolean_or in1 in3 in4 exec_dup exec_dup integer_* in1 in4 integer_* exec_dup exec_if integer_+ boolean_or in1 exec_if integer_+)
+Best program: (exec_if (exec_if (boolean_and boolean_and in2 in3 boolean_or in1 in3 in4 exec_dup (exec_dup (integer_* in1 in4 integer_* exec_dup (exec_if (integer_+ boolean_or in1 exec_if (integer_+) ()) ())))) ()) ())
+Best total error: 805.1999999999999
+Best errors: (12.5 44 30 33.5 76 170 14 44 18 15 1.0 1.0 31 68 6 18 47.4 31.8 18 13 29.5 58.0 13.5 12.0)
+Best behaviors: (212.5 69 55 233.5 460 214 120 150 6 9 3.0 3.0 269 232 13 25 3.6 19.2 7 12 18.5 -10.0 39.5 14.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (in1 integer_* in2 integer_* integer_* in1 true integer_+ in2 integer_* in4 in4 exec_dup in3 integer_* integer_+ exec_dup)
+Best program: (in1 integer_* in2 integer_* integer_* in1 true integer_+ in2 integer_* in4 in4 exec_dup (in3 integer_* integer_+ exec_dup ()))
+Best total error: 676.26
+Best errors: (15.0 29 29 15.0 8 24 40 40 42 50 3.25 3.25 110 90 11 1 9.0 8.759999999999998 17 29 1.0 11.0 3.0 87.0)
+Best behaviors: (215.0 54 54 215.0 376 360 146 146 -18 -26 0.75 0.75 190 210 18 6 60.0 59.76 42 54 47.0 59.0 23.0 -61.0)
+
+-------------------------------------------------------
+               Report for Generation 500
+-------------------------------------------------------
+Best plushy: (boolean_and in4 exec_if in1 integer_+ integer_dup boolean_and integer_dup integer_dup boolean_not integer_dup in2 integer_+ integer_+ exec_dup integer_* boolean_not in2 in3 in4 integer_* integer_+ in3 integer_+ exec_dup integer_+ integer_+ boolean_= boolean_=)
+Best program: (boolean_and in4 exec_if (in1 integer_+ integer_dup boolean_and integer_dup integer_dup boolean_not integer_dup in2 integer_+ integer_+ exec_dup (integer_* boolean_not in2 in3 in4 integer_* integer_+ in3 integer_+ exec_dup (integer_+ integer_+ boolean_= boolean_=))) ())
+Best total error: 642.72
+Best errors: (6.0 79 64 6.0 8 32 16 8 4 25 3.0 3.0 76 103 38 26 18.32 16.400000000000006 39 3 2.5 14.5 35.5 16.5)
+Best behaviors: (194.0 104 89 194.0 376 416 122 98 28 49 7.0 7.0 224 197 45 33 32.68 34.599999999999994 64 28 50.5 33.5 -9.5 9.5)
+
+
+
+
