@@ -30,7 +30,7 @@ I chose this problem because there certainly exists a "correct" solution, but th
     'exec_dup
     'exec_if
 
-Vectors of 4 numbers each are given as the programs input. These are compared against a single output that is the correct largest combination. Lexicase selection was used to determine error values.
+Vectors of 4 numbers each are given as the programs input. These are compared against a single output that is the correct largest combination.Both tournament and lexicase selection were used to determine error values.
 
 <hr>
 
@@ -78,7 +78,7 @@ Best behaviors: (200.0 57/2 25 190.525)
     [20 500 -1 0.2] [-1 0.2 500 20] [-0.5 2 3 4] [3 4 2 -0.5]
     [-0.5 -2 3 4] [3 4 -2 -0.5] [-0.5 -2 -3 4] [-3 4 -2 -0.5]     
 
-The average "Best Error" was around 1050. The errors here are difficult to compare to the previous ones because of the greatly increased amount of test cases, but these programs were slightly better than the previous ones. Here is the best program made given these inputs and using lexicase selection.
+The average "Best Error" was around 1050. The errors here are difficult to compare to the previous ones because of the greatly increased amount of test cases, but these programs were slightly better than the previous ones (judged by the fact that many cases had an error value of 0). Here is the best program made given these inputs and using lexicase selection.
 ```
 -------------------------------------------------------
                Report for Generation 500
@@ -118,7 +118,7 @@ Best errors: (0.5 117/4 37 29.599999999999994 153/8 475/4 14/3 2 31 4 0.5 0.5 23
 Best behaviors: (200.5 217/4 62 229.6 3225/8 1061/4 304/3 108 -7 28 4.5 4.5 7.272 4.48 40/3 26 25.8 42.3 30.25 27.0 32.25 33.0 44.25 -3.0)
 ```
 
-Making these changes did make non-marginal improvements to the program.
+Including these changes made non-marginal improvements to the program.
 
 <hr>
 
