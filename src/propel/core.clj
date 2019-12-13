@@ -21,7 +21,10 @@
    'integer_*
    'integer_%
    'integer_=
+   'integer_dup
    'exec_dup
+   'exec_if
+   'exec_if
    'exec_if
    'boolean_and
    'boolean_or
@@ -178,6 +181,12 @@
 (defn integer_=
   [state]
   (make-push-instruction state = [:integer :integer] :boolean))
+
+(defn integer_dup
+  [state]
+  (if (empty-stack? state :integer)
+    state
+    (push-to-stack state :integer (first (:integer state)))))
 
 (defn exec_dup
   [state]
@@ -423,7 +432,7 @@
                                 (make-random-plushy instructions
                                                     max-initial-plushy-size)))]
     (let [evaluated-pop (sort-by :total-error
-                                 (map (partial error-function argmap)
+                                 (pmap (partial error-function argmap)
                                       population))]
       (report evaluated-pop generation)
       (cond
@@ -512,8 +521,18 @@
   "Finds the largest possible combination of a given number of integers."
   [argmap individual]
   (let [program (push-from-plushy (:plushy individual))
-        inputs [[10 -5 5 0.5] [1 2 3 4] [-1 -2 -3 -4] [4 3 2 1] [-0.5 0.5 1 1.5] [-1 2 -3 4]]
-        correct-outputs [200 25 24 25 4.5 24]
+        inputs [[10 -5 5 0.5] [1 2 3 4] [4 3 2 1] [0.5 5 -5 10]
+                [2 4 6 8] [8 6 2 4] [1 7 5 3] [3 5 7 1]
+                [-3 -2 -4 -1] [-4 -3 -2 -1] [0.5 0.5 0.5 0.5] [0.5 0.5 0.5 0.5]
+                [5 4 5 3] [4 5 5 3] [0 1 2 3] [3 1 2 0]
+                [2 5 -1 0.2] [-1 0.2 5 2] [-1 2 3 4] [3 4 2 -1]
+                [-0.5 -2 3 4] [3 4 -2 -0.5] [-0.5 -2 -3 4] [-3 4 -2 -0.5]]
+        correct-outputs [200 25 25 200
+                         384 384 106 106
+                         24 24 4 4
+                         300 300 7 7
+                         51 51 25 25
+                         48 48 26 26]
         outputs (map (fn [input]
                        (peek-stack
                         (interpret-program
@@ -528,7 +547,12 @@
         errors (map (fn [correct-output output]
                       (if (= output :no-stack-item)
                         1000000
-                        (abs (- correct-output output))))
+                        (if (and (> output 0) (unchecked-int output))
+                          (abs (- correct-output output))
+                          (if (< output 0)
+                          1000
+                          (* 2 (abs (- correct-output output)))
+                          ))))
                     correct-outputs
                     outputs)]
     (assoc individual
@@ -543,7 +567,7 @@
     (propel-gp (update-in (merge {:instructions default-instructions
                                   :error-function largest-combination-error-function
                                   :max-generations 500
-                                  :population-size 400
+                                  :population-size 200
                                   :max-initial-plushy-size 50
                                   :step-limit 100
                                   :parent-selection :lexicase
