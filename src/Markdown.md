@@ -6,7 +6,7 @@ the largest possible combination of the numbers using only the math operators **
 
 The program should not use parentheses, but should be able to manipulate the order of the integers given.
 
-I chose this problem because there certainly exists a "correct" solution, but it is not obvious the best way to solve it. 
+I chose this problem because there certainly exists a "correct" solution, but the solution is not obvious. 
 
 <hr>
 
